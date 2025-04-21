@@ -67,3 +67,30 @@ POST /api/v1/orders - Crear orden
 PUT /api/v1/orders/<id> - Actualizar orden
 
 DELETE /api/v1/orders/<id> - Eliminar orden
+
+Estructura del Proyecto
+
+microservices-app/
+├── docker-compose.yml
+├── kubernetes/
+│   ├── order-deployment.yml
+│   ├── order-service.yml
+│   ├── user-deployment.yml
+│   └── user-service.yml
+├── order-service/
+│   ├── app.py
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── templates/
+│       └── orders/
+│           ├── edit.html
+│           ├── index.html
+│           └── new.html
+└── user-service/
+    ├── app.py
+    ├── Dockerfile
+    ├── requirements.txt
+    └── templates/
+        ├── edit_user.html
+        ├── index.html
+        └── new_user.html
